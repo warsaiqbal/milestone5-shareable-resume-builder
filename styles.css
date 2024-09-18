@@ -1,0 +1,257 @@
+    /* Base Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Typography */
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Buttons Styling */
+  button {
+    display: block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Colors */
+  #generateResumeButton {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #generateResumeButton:hover {
+    background-color: #0056b3;
+  }
+  
+  #seeResumeButton {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  #seeResumeButton:hover {
+    background-color: #218838;
+  }
+  
+  #printResumeButton {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  #printResumeButton:hover {
+    background-color: #e0a800;
+  }
+  
+  #createNewResumeButton {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  #createNewResumeButton:hover {
+    background-color: #c82333;
+  }
+  
+  /* Resume Section Styling */
+  #resumeSection {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #resumeSection h2 {
+    margin-bottom: 20px;
+    color: #140558;
+    text-align: center;
+    font-size: 2.5em;
+  }
+  
+  #resumeSection h3 {
+    margin-top: 20px;
+    color: #007bff;
+  }
+  
+  #resumeSection p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  #resumeSection p strong {
+    color: #333;
+  }
+  
+  #profilePicture:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+  }
+  /* Edit Resume Button */
+  #editResumeButton {
+    background-color: #17a2b8;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  #editResumeButton:hover {
+    background-color: #138496;
+  }
+  
+  /* Hide buttons during print */
+  .print-hide {
+    display: none;
+  }
+  /* Temporarily disable .print-hide to see if the button shows */
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .container {
+      width: 95%;
+    }
+  
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    h1,
+    h2,
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    #resumeSection h2 {
+      font-size: 2em;
+    }
+  
+    #resumeSection h3 {
+      font-size: 1.25em;
+    }
+  
+    #resumeSection p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.2em;
+    }
+  
+    h2 {
+      font-size: 1.4em;
+    }
+  
+    h3 {
+      font-size: 1.1em;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  
+    #resumeSection h2 {
+      font-size: 1.5em;
+    }
+  
+    #resumeSection h3 {
+      font-size: 1em;
+    }
+  
+    #resumeSection p {
+      font-size: 12px;
+    }
+  }

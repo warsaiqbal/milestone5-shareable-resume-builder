@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shareable Resume Builder - Warsa</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="app.css" media="print">
+</head>
+
+<body>
+  <script src="script.js" defer></script>
+  <div class="container">
+    <h1>Unique Path & Shareable Link</h1>
+
+    <!-- Form for collecting user input -->
+    <form id="resumeForm">
+      <section id="formSection">
+        <h2>Personal Information</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required />
+      </section>
+
+      <!-- Education -->
+      <section>
+        <h2>Education</h2>
+
+        <label for="secondarySchool">School Name:</label>
+        <input type="text" id="secondarySchool" name="secondarySchool" placeholder="Enter school name" />
+
+        <label for="secondaryYear">Year of Completion:</label>
+        <input type="number" id="secondaryYear" name="secondaryYear" placeholder="1985" />
+
+        <label for="college">College Name:</label>
+        <input type="text" id="college" name="college" placeholder="Enter college name" />
+
+        <label for="collegeYear">Year of Completion:</label>
+        <input type="number" id="collegeYear" name="collegeYear" placeholder="1989" />
+
+        <label for="university">University Name:</label>
+        <input type="text" id="university" name="university" placeholder="Enter university name" />
+
+        <label for="universityYear">Year of Completion:</label>
+        <input type="number" id="universityYear" name="universityYear" placeholder="2005" />
+      </section>
+
+      <!-- Work Experience -->
+      <section>
+        <h2>Work Experience</h2>
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" required />
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" required />
+
+        <label for="workYears">Years Worked:</label>
+        <input type="number" id="workYears" name="workYears" required />
+      </section>
+
+      <!-- Skills -->
+      <section>
+        <h2>Skills</h2>
+        <label for="skills">Skills (comma separated):</label>
+        <input type="text" id="skills" name="skills" required />
+      </section>
+    </form>
+    <form id="resumeForm"></form>
+    <section>
+      <h2>Generate Your URL Here</h2>
+      <label for="username">Username (used for URL):</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Add your form fields here -->
+    </section>
+
+    <button type="button" id="generateResumeButton">Generate URL</button>
+    </form>
+
+    <!-- See Your Resume Button -->
+    <button id="seeResumeButton">Generate Resume</button>
+
+    <!-- Dynamic Resume Display -->
+    <div id="resumeSection">
+      <h2>Curriculum Vitae</h2>
+
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> <span id="resumeName"></span></p>
+      <p><strong>Email:</strong> <span id="resumeEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="resumePhone"></span></p>
+      <p><strong>Address:</strong> <span id="resumeAddress"></span></p>
+
+      <div id="secondarySection">
+        <h2>Education</h2>
+        <h3>Matriculation</h3>
+        <p><strong>School Name:</strong> <span id="resumeSecondarySchool"></span></p>
+        <p><strong>Year of Completion:</strong> <span id="resumeSecondaryYear"></span></p>
+      </div>
+
+      <div id="collegeSection">
+        <h3>Intermediate</h3>
+        <p><strong>College Name:</strong> <span id="resumeCollege"></span></p>
+        <p><strong>Year of Completion:</strong> <span id="resumeCollegeYear"></span></p>
+      </div>
+
+      <div id="universitySection">
+        <h3>University</h3>
+        <p><strong>University Name:</strong> <span id="resumeUniversity"></span></p>
+        <p><strong>Year of Completion:</strong> <span id="resumeUniversityYear"></span></p>
+      </div>
+
+      <h2>Work Experience</h2>
+      <p><strong>Job Title:</strong> <span id="resumeJobTitle"></span></p>
+      <p><strong>Company:</strong> <span id="resumeCompany"></span></p>
+      <p><strong>Years Worked:</strong> <span id="resumeWorkYears"></span></p>
+
+      <h2>Skills</h2>
+      <p id="resumeSkills"></p>
+
+      <!-- Print and Create New Resume Buttons -->
+      <button id="printResumeButton" class="print-hide">Print Resume</button>
+      <button id="createNewResumeButton" class="print-hide">Create New Resume</button>
+
+      <div id="resumeSection">
+        <!-- Resume content here -->
+        <button id="editResumeButton" class="print-hide">Edit Resume</button>
+      </div>
+
+      <div id="formSection">
+        <!-- Form content here -->
+      </div>
+    </div>
+    <div id="shareOptions" style="display:none;">
+      <h2>Your unique resume link:</h2>
+      <a id="resumeLink" href="#">Click to View</a>
+      <button id="downloadPDFButton">Download as PDF</button>
+    </div>
+  </div>
+</body>
+
+</html>

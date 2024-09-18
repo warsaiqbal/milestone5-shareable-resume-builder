@@ -1,0 +1,81 @@
+@media print {
+    button,
+    input {
+      display: none !important;
+    }
+  
+    /* Style the container to fit the page and look clean */
+    .container {
+      width: 100%;
+      margin: 0;
+      padding: 20px; /* Add some padding for print readability */
+      font-family: Arial, sans-serif;
+      /* color: #00000049; Ensure text is black for better print clarity */
+      background-color: #fff; /* White background for clean print */
+    }
+  
+    /* Ensure all fonts are appropriate for print */
+    h1,
+    h2,
+    h3,
+    p,
+    span {
+      font-size: 12pt; /* Adjust font sizes for print readability */
+      line-height: 1.5; /* Better line spacing for print */
+      color: #333 I !important;
+    }
+    h2 {
+      color: 140558 !important;
+    }
+    h3 {
+      color: 007bff !important;
+    }
+    /* Ensure any sections have proper margins and padding */
+    .section {
+      margin: 15px 0;
+      padding: 10px;
+      border-bottom: 1px solid #ddd; /* Optional border for section clarity in print */
+      color: #333 I !important;
+    }
+  
+    /* Remove background colors and images to avoid print issues */
+    * {
+      background: transparent !important;
+      color: #000 !important; /* Ensure text is always printed in black */
+    }
+  
+    /* Remove any unnecessary spacing or padding */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  
+    /* Adjust page margins and size for different devices */
+    @page {
+      size: auto;
+      margin: 10mm; /* Suitable margin for both desktop and mobile */
+    }
+  
+    /* Break pages cleanly between sections */
+    h1,
+    h2,
+    h3,
+    .section {
+      page-break-after: avoid; /* Prevent breaking headings across pages */
+    }
+  
+    /* Ensure images (if any) are printed properly */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Make resume container responsive for printing */
+    #resumeSection {
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+    }
+  }
